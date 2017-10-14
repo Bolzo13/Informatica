@@ -2,9 +2,6 @@ package com.simone;
 
 import java.util.ArrayList;
 
-/**
- * Created by studente on 12/10/17.
- */
 public class RPN {
     private ArrayList<Item> exp;
 
