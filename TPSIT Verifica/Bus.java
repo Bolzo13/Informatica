@@ -1,86 +1,56 @@
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.TimeUnit;
-import java.util.Random;
-/**
- * Created by simone
- */
-public class Bus extends Thread{
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.*;
 
-    private Random nRandom = new Random();
-    private Semaphore semaphore;
-    private int maxPasseggeri;
-    private int nFermate = 6;
-    private int fermataControllore;
-    private int tempoFermata = 10;
-
-    Bus(int maxPasseggeri){
-        this.maxPasseggeri = maxPasseggeri;
-        semaphore = new Semaphore(maxPasseggeri);
-    }
-
-    @Override
-    public void run(){
-        fermataControllore = nRandom.nextInt(nFermate);
-        for(int i=0; i<nFermate; i++){
-
-            System.out.println("Fermata numero "+(i+1)+" di "+nFermate);
-
-            //Random passeggeri che scendono
-            int randomPass = nRandom.nextInt(maxPasseggeri);
-            //Faccio scendere passeggeri
-            for(int j=0; j<randomPass; j++){
-                if(semaphore.availablePermits() < maxPasseggeri) {
-                    System.out.println("Sceso passeggero numero " + (maxPasseggeri - semaphore.availablePermits()));
-                    semaphore.release();
-                }
-            }
-
-            if(i+1 < nFermate){
-                //Random di passeggeri che montano
-                randomPass = nRandom.nextInt(maxPasseggeri);
-
-                //Faccio salire passeggeri
-                for(int j=0; j<randomPass; j++){
-                    try {
-                        semaphore.acquire();
-                        System.out.println("Salito passeggero numero "+(maxPasseggeri-semaphore.availablePermits()));
-                    } catch (InterruptedException ex) {
-                    }
-                }
-            }
-
-            if(i+1 == fermataControllore){
-                Thread controllore = new Thread(new Controllore(semaphore, maxPasseggeri));
-                controllore.start();
-                try {
-                    controllore.join();
-                } catch (InterruptedException e) {}
-            }
-
-            try {
-                TimeUnit.SECONDS.sleep(tempoFermata);
-            } catch (InterruptedException ex) {}
+public class Bus{
+	public static final int NUMERO_POSTI = 3;
+	private Lock sezioneCritica;
+	private Semaphore postiLiberi;
+	private Semaphore postiOccupati;
+	private Passeggero[] passeggeri;
+	private int stopNumber;
+	private String name;
+	
+	public Bus(String name){
+		postiLiberi = new Semaphore(NUMERO_POSTI);
+		postiOccupati = new Semaphore(0);
+		sezioneCritica = new ReentrantLock();
+		passeggeri = new Passeggero[NUMERO_POSTI];
+		int stopNumber = -1;
+		this.name = name;
+	}
+	public int getStop(){
+		return stopNumber;
+	}
+	public boolean sale(Passeggero passeggero){
+		int i;
+	    boolean salito=false;
+		sezioneCritica.lock();
+		if(postiLiberi.tryAcquire()){
+		    salito=true;
+		    passeggero.setBus(this);
+            for(i=0; passeggeri[i] != null; i++);
+            passeggeri[i] = passeggero;
+			postiOccupati.release();
         }
-    }
-}
-
-private class Controllore extends Thread{
-
-    private Semaphore s;
-    private int p;
-
-    Controllore(Semaphore s, int p){
-        this.s = s;
-        this.p = p;
-    }
-
-    @Override
-    public void run(){
-        System.out.println("Controllore! I passeggeri sono i seguenti:");
-        int i;
-        for(i = 0; i<p-s.availablePermits()-1; i++)
-            System.out.print("Passeggero"+(i+1)+", ");
-        System.out.print("Passeggero"+(i+1)+"\n");
-    }
-
+        sezioneCritica.unlock();
+		return salito;
+	}
+	public void scende(Passeggero passeggero){
+		int i;
+		sezioneCritica.lock();
+			postiOccupati.tryAcquire();
+			for(i=0; passeggeri[i].getName()!=passeggero.getName(); i++);
+			passeggeri[i] = null;
+			postiLiberi.release();
+			passeggero.setBus(null);
+		sezioneCritica.unlock();
+	}
+	
+	public void fermata(){
+		stopNumber++;
+		for(int i=0; i<NUMERO_POSTI; i++){
+			if(passeggeri[i] !=  null) passeggeri[i].interrupt();
+		}
+	}
 }
