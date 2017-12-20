@@ -3,7 +3,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.*;
 
 public class Bus{
-	public static final int NUMERO_POSTI = 3;
+	public static final int NUMERO_POSTI = 10;
 	private Lock sezioneCritica;
 	private Semaphore postiLiberi;
 	private Semaphore postiOccupati;
