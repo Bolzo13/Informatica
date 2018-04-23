@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Romanzi e racconti</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <header>
+        <div id="titolo">
+            Romanzi e racconti 
+            <div id="search">
+                <form>
+                    <h4> Cerca libri e romanzi...</h4>
+                    <input type="text" id="cerca">
+                    <input type="submit" id="invia">
+                </form>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <aside>
+
+        <p id="aside">
+            Romanzi e racconti è semplicemente una base dati di romanzi e racconti.
+            Puoi aggiungere i libri che ti piacciono, recensirli, etichettarli e 
+            condividerli. E puoi andare a vedere cosa piace agli altri.
+        </p>
+        <hr width="75%" align="left">
+        <form>
+            <table>
+                <th align="left" class="aside" colspan="2">
+                    chi sei?
+                </th>
+                <tr>
+                    <td>
+                        username: 
+                    </td>
+                    <td>
+                        <input type="text" id="username" class="asideIn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        password 
+                    </td>
+                    <td>
+                        <input type="password" id="password" class="asideIn">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        forgot password?
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="sign in" id="accedi">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <hr width="75%" align="left">
+        <form>
+            <table>
+                <th align="left" class="aside" colspan="2">
+                    Registrati
+                </th>
+                <tr>
+                    <td>
+                        username: 
+                    </td>
+                    <td>
+                        <input type="text" id="usernameReg" class="asideIn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        password 
+                    </td>
+                    <td>
+                        <input type="password" id="passwordReg" class="asideIn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        password<br>reapeted
+                    </td>
+                    <td>
+                        <input type="password" id="passwordRep" class="asideIn">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        email: 
+                    </td>
+                    <td>
+                        <input type="text" id="email" class="asideIn">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="checkbox" name="term" value="term" > I agree to the Terms of Use
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="sign up" id="registarti">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </aside>
+    <article>
+        <div class="border">
+            <h1>
+                Scopri
+            </h1>
+            <p id="background">Cerca nella base dati per titolo, autore...</p>
+            <input type="text" style="width: 70%" > <input type="submit" value="fruga">
+        </div>
+        <div>
+            <h2>Esplora</h2>
+            <b>Libri aggiornati di recente</b> | tag popolari | Libri consigliati
+        </div>
+        <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="border-right: gray solid 1px; border-bottom: gray solid 1px">
+                            <h5>Tom De Marco, Timothy Lister: Peopleware</h5>
+                            <div class="recommendations">
+                                <p>scifi, action, sci-fi, lucas, great, space, starwars, adventure, boring, sequel, ...</p>
+                                <p class="readers">in 16 lo raccomandano</p>
+                                <p class="readers">in 26 lo hanno letto</p>
+                            </div>
+                        </td>
+                        <td style="border-bottom: gray solid 1px">
+                            <div class="recommendations">
+                                <h5>J.R.R Tolkien, Il Signore degli anelli</h5>
+                                <p>drama, prison, thriller, quality, over-rated, injustice, added, jailbreak, this, escape, ...</p>
+                                <p class="readers">in 16 lo raccomandano</p>
+                                <p class="readers">in 26 lo hanno letto</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="border-right: gray solid 1px">
+                            <div class="recommendations">
+                                <h5>Douglas Coupland, Eleanor Rigby</h5>
+                                <p>drugs, drama, weird, addiction, love, drug, ignorant, bliss, tragic, morale, ...</p>
+                                <p class="readers">in 16 lo raccomandano</p>
+                                <p class="readers">in 26 lo hanno letto</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="recommendations">
+                                <h5>C. S. Lewis, Lontano dal pianeta silenzioso</h5>
+                                <p>pirates, action, adventure, comedy, depp, fantasy, pirate, curse, jack, caribbean, ...</p>
+                                <p class="readers">in 16 lo raccomandano</p>
+                                <p class="readers">in 26 lo hanno letto</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</html>

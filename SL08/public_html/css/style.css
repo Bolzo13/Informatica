@@ -1,0 +1,160 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-mar-2018, 20.38.05
+    Author     : simon
+*/
+
+header div#titolo{
+    font-family: "Times new Roman", Times;
+    font-size: 48px;
+    font-style: italic;
+    float: left;
+    width: 100%;
+    color: #27508f;
+}
+
+h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: crimson;
+    font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+header div#search{
+    font-size: 12px;
+    font-family: "Calibri";
+    font-style: normal;
+    float: right;
+    color: lightskyblue;
+}
+
+aside{
+    width: 20%;
+    float: left;
+    border-right-style: solid; 
+    border-right-color: gray;
+    border-right-width: 1px;
+}
+
+p#aside{
+    font-size: 18px;
+    color: #27508f;
+    font-family: "Calibri";
+}
+
+form th.aside{
+    font-family: "Calibri";
+    font-size: 22px;
+    color: sandybrown;
+}
+
+form table{
+    font-size: 14px;
+    font-family: "Calibri";
+    font-style: normal;
+    color: lightskyblue;
+}
+article{
+    font-size: 18px;
+    color: #27508f;
+    font-family: "Calibri";
+}
+article div {
+    width: 75%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    float: left;
+}.border{
+    width: 75%;
+    border-radius: 10px;
+    float: left;
+    background-color: #2357A0;
+    color: orange;
+    font-size: 22px;
+}
+
+article div h1{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+    font-family: "Calibri";
+    color: white;
+    font-size: 32px;
+}
+
+input.asideIn{
+    width: 95%;
+}
+
+h2{
+    font-size: 26px;
+    color: #27508f;
+    font-family: "Calibri";
+}
+
+* {
+    color: darkblue;
+}
+
+h1 {
+    font-family: "URW Palladio L", serif;
+    font-style: italic;
+    font-size: 50px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+h2{
+    font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+    font-size: 30px;
+    color: orange;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+h3 {
+    font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+    font-size: 35px;
+    color: white;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: crimson;
+    font-family: Calibri, Candara, Segoe, Optima, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+div.recommendations {
+}
+
+hr {
+    width: 100%;
+}
+
+p.readers{
+    font-size: 15px;
+}
+
+#background{
+    color: orange;
+}
