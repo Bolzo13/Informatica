@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="205.0" prefWidth="333.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rilevatore.FXMLDocumentController">
+	<children>
+      <Slider fx:id="barra" layoutX="11.0" layoutY="81.0" majorTickUnit="10.0" max="60.0" minorTickCount="0" onDragDetected="#BarraSpostata" onDragDone="#BarraSpostata" onDragDropped="#BarraSpostata" onDragOver="#BarraSpostata" onMouseDragReleased="#BarraSpostata" prefHeight="38.0" prefWidth="318.0" showTickLabels="true" showTickMarks="true" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="81.0" />
+      <Button fx:id="play" layoutX="14.0" layoutY="139.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="96.0" text="▶">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Button fx:id="stop" layoutX="223.0" layoutY="139.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="96.0" text="⏹">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <TextField fx:id="display" editable="false" layoutX="154.0" layoutY="16.0" prefHeight="65.0" prefWidth="106.0" />
+      <Label fx:id="label" layoutX="21.0" layoutY="22.0" prefHeight="57.0" prefWidth="113.0" text="Secondi:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+	</children>
+</AnchorPane>
