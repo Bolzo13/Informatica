@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<form>
+			<table>
+				<caption>Scheda di Lavoro 07.02</caption>
+				<tr>
+					<td>
+						Cognome e Nome:
+					</td>
+					<td>
+						<input type="text" name="(cog+1)nome" maxlength="50" onchange="isANumber()">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sesso:
+					</td>
+					<td>
+						<input type="radio" name="sesso" value="m" id="maschio"> M<br>
+						<input type="radio" name="sesso" value="f" id="femmina"> F<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Ateneo
+					</td>
+					<td>
+						<select id="ateneo">
+							<option label="Scegli..."></option>
+							<option>Padova</option>
+							<option>Padova (Feltre)</option>
+							<option>Padova (Legnaro)</option>
+							<option>Padova (Conegliano)</option>
+							<option>Padova (Rovigo)</option>
+							<option>Padova (San Sepolcro)</option>
+							<option>Padova (Treviso)</option>
+							<option>Padova (Vicenza)</option>
+							<option>Padova (Thiene)</option>
+							<option>Udine</option>
+							<option>Udine (Mestre)</option>
+							<option>Udine (Gorizia)</option>
+							<option>Udine (Cormons)</option>
+							<option>Udine (Pordeone)</option>
+							<option>Udine (Gemona del Friuli)</option>
+							<option>Udine (Cividale del Friuli)</option>
+							<option>Udine (Zelarino)</option>
+							<option>Ca' Foscari (Venezia)</option>
+							<option>Ca' Foscari (Mestre)</option>
+							<option>Ca' Foscari (Oriago di Mira)</option>
+							<option>Ca' Foscari (Belluno)</option>
+							<option>Ca' Foscari (Treviso)</option>
+							<option>IUAV Venezia</option>
+							<option>IUAV Venezia (San Donà di Piave)</option>
+							<option>IUAV Venezia (Treviso)</option>
+							<option>IUAV Venezia (Portogruaro)</option>
+							<option>Verona</option>
+							<option>Verona (Rovereto)</option>
+							<option>Verona (Vicenza)</option>
+							<option>Verona (Bolzano)</option>
+							<option>Verona (Trento)</option>
+							<option>Verona (Legnano)</option>
+							<option>Verona (Vicenza)</option>
+							<option>Verona (Ala)</option>
+						</select>
+
+					</td>
+				</tr>
+				<tr>
+					<td>
+						CAP:
+					</td>
+					<td>
+						<input type="text" maxlength="5" onchange="verificaCap()">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Studente Lavoratore:
+					</td>
+					<td>
+						<input type="checkbox">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Lavoro Svolto:
+					</td>
+					<td>
+						<input type="text" name="telefono" maxlength="80">
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" value="Submit" onclick="isVuoto()">
+						<input type="reset" value="Reset">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>Codice Fiscale</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<script src="codiceFiscale.js"></script>
+		<form>
+			<table>
+				<caption>CodiceFiscale</caption>
+				<tr>
+					<td>
+						Nome:
+					</td>
+					<td>
+						<input type="text" name="nome">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Cognome:
+					</td>
+					<td>
+						<input type="text" name="cognome">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Data di nascita:
+					</td>
+					<td>
+						<input type="date" name="data di nascita">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Sesso:
+					</td>
+					<td>
+						<input type="radio" name="sesso" value="m" id="maschio"> M<br>
+						<input type="radio" name="sesso" value="f" id="femmina"> F<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Comune di nascita:
+					</td>
+					<td>
+						<select>
+							<option>ANNONE VENETO</option>
+                            <option>CAMPAGNA LUPIA</option>
+                            <option>CAMPOLONGO MAGGIORE</option>
+                            <option>CAMPONOGARA</option>
+                            <option>CAORLE</option>
+                            <option>CAVARZERE</option>
+                            <option>JESOLO</option>
+                            <option>CEGGIA</option>
+                            <option>CHIOGGIA</option>
+                            <option>CINTO CAOMAGGIORE</option>
+                            <option>CONA</option>
+                            <option>CONCORDIA SAGITTARIA</option>
+                            <option>DOLO</option>
+                            <option>ERACLEA</option>
+                            <option>FIESSO D'ARTICO</option>
+                            <option>FOSSALTA DI PIAVE</option>
+                            <option>FOSSALTA DI PORTOGRUARO</option>
+                            <option>FOSSO'</option>
+                            <option>GRUARO</option>
+                            <option>MARCON</option>
+                            <option>MARTELLAGO</option>
+                            <option>MEOLO</option>
+                            <option>MIRA</option>
+                            <option>MIRANO</option>
+                            <option>MUSILE DI PIAVE</option>
+                            <option>NOALE</option>
+                            <option>NOVENTA DI PIAVE</option>
+                            <option>PIANIGA</option>
+                            <option>PORTOGRUARO</option>
+                            <option>PRAMAGGIORE</option>
+                            <option>QUARTO D'ALTINO</option>
+                            <option>SALZANO</option>
+                            <option>SAN DONA' DI PIAVE</option>
+                            <option>SAN MICHELE AL TAGLIAMENTO</option>
+                            <option>SANTA MARIA DI SALA</option>
+                            <option>SANTO STINO DI LIVENZA</option>
+                            <option>SCORZE'</option>
+                            <option>SPINEA</option>
+                            <option>STRA</option>
+                            <option>TEGLIO VENETO</option>
+                            <option>TORRE DI MOSTO</option>
+                            <option>VENEZIA</option>
+                            <option>VIGONOVO</option>
+                            <option>CAVALLINO-TREPORTI</option>							
+						</select>
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value="Submit" onclick="codiceFiscale()">
+		</form>
+	</body>
+</html>
