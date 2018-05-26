@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cambio valuta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="material.css" type="text/css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Cambio valuta</h1>
+
+                <table width="500">
+                    <tr>
+                        <td colspan="2">
+                            <input id="soldi" type="text" required="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <select id="partenza" ><option>Seleziona...</option></select>
+                        </td>
+                        <td rowspan="2">
+                            <input id="invio" type="submit" value="⇅" onclick="change()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="input">                  
+                            <select id="destinazione"><option>Seleziona...</option></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div id="risultato"> </div>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>
